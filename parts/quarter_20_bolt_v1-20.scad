@@ -5,6 +5,8 @@ $fn = 96;
 
 inch = 25.4;
 bolt_major_diameter = 0.25 * inch;      // 1/4 inch nominal major diameter
+bolt_fit_clearance = 0.25;              // undersize printed thread so it fits a metal 1/4-20 nut
+bolt_thread_major_diameter = bolt_major_diameter - bolt_fit_clearance;
 bolt_length = 1 * inch;                 // 1 inch threaded length
 threads_per_inch = 20;
 thread_pitch = inch / threads_per_inch; // 20 TPI = 1.27 mm pitch
@@ -13,7 +15,10 @@ head_diameter = 11;
 head_height = 4;
 
 // 1/4-20 UNC external minor diameter is about 0.1887-0.1959 in.
+// Undersize the modeled minor diameter by the same amount as the major
+// diameter to pull the thread flanks inward while preserving thread depth.
 bolt_minor_diameter = 4.90;
+bolt_thread_minor_diameter = bolt_minor_diameter - bolt_fit_clearance;
 thread_segments_per_turn = 48;
 thread_angular_segments = 96;
 
@@ -86,8 +91,8 @@ module quarter_20_bolt() {
 
         translate([0, 0, head_height])
             unc_thread_solid(
-                bolt_major_diameter,
-                bolt_minor_diameter,
+                bolt_thread_major_diameter,
+                bolt_thread_minor_diameter,
                 bolt_length,
                 thread_pitch
             );
