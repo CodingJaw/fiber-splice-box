@@ -50,9 +50,10 @@ module hinge_small_exploded(spacing = 18) {
         hinge_small_cap();
 }
 
-// Set to "assembled" to view the imported parts in their saved STL positions,
-// or "exploded" to inspect the individual parts separated from one another.
-view = "assembled";
+/* [View] */
+
+// Select how to display the imported v1 STL parts.
+view = "assembled"; // [assembled: Assembled, exploded: Exploded]
 
 if (view == "exploded") {
     hinge_small_exploded();

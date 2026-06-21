@@ -8,9 +8,11 @@ $fn = 96;
 
 stl_dir = "./";
 
-// Part selector:
-//   "assembly", "exploded", "left_hinge", "right_hinge", "spacer", "cap"
-show_part = "assembly";
+/* [View] */
+
+// Select which v3 part or layout to render.
+show_part = "assembly"; // [assembly: Assembly, exploded: Exploded, left_hinge: Left hinge, right_hinge: Right hinge, spacer: Spacer, cap: Cap]
+
 exploded_spacing = 24;
 
 // Source V1 STL bounding-box dimensions.  Do not change these unless the STL

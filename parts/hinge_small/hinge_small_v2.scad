@@ -5,10 +5,11 @@
 
 $fn = 96;
 
-// Part selector:
-//   "assembly", "exploded", "left_hinge", "right_hinge",
-//   "left_leaf", "right_leaf", "left_barrels", "right_barrel", "pin"
-show_part = "assembly";
+/* [View] */
+
+// Select which v2 part or layout to render.
+show_part = "assembly"; // [assembly: Assembly, exploded: Exploded, left_hinge: Left hinge, right_hinge: Right hinge, left_leaf: Left leaf, right_leaf: Right leaf, left_barrels: Left barrels, right_barrel: Right barrel, pin: Pin]
+
 exploded_spacing = 18;
 
 // Left hinge leaf parameters.
