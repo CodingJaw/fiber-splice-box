@@ -17,3 +17,16 @@ Open the model with OpenSCAD, or render it from the command line:
 ```sh
 openscad -o hinge.stl hinge.scad
 ```
+
+## CR-6 filament spool adapter
+
+`cr6/filament_spool_adapter.scad` defines a parametric two-piece spool
+adapter. The defaults adapt a 30 mm shaft to a 52 mm spool bore with a 60 mm
+outer keeper/flange supported against the side of the spool.
+
+Adjust the shaft, spool, keeper, width, and clearance variables at the top of
+the file, then render it from the command line:
+
+```sh
+openscad -o cr6/filament_spool_adapter.stl cr6/filament_spool_adapter.scad
+```
