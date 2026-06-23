@@ -1,7 +1,7 @@
-// Parametric two-piece filament spool adapter.
+// Parametric two-piece filament spool adapter V1.
 // Dimensions are in millimeters.
 //
-// Default values match the existing CR-6 STL intent:
+// V1 default values match the existing CR-6 STL intent:
 // - 30 mm printer shaft
 // - 52 mm spool bore
 // - 60 mm keeper/flange supported against the spool side
