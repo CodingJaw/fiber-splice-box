@@ -1,4 +1,4 @@
-// Combined CR6 front base plate + trimmed GoPro two-blade v3 mount.
+// Combined CR6 front base plate + low-profile trimmed GoPro two-blade v3 mount.
 // Uses the parametric base plate from front_plate_base_v1.scad and the trimmed/corner-relieved gopro_mount_2blade_v3.scad.
 // Dropdown-only options are provided for plate holes, thickness, and mount rotation.
 
@@ -24,9 +24,9 @@ module centered_gopro_mount_2blade_v3(thickness = base_plate_thickness, rotation
                 gopro_mount_2blade_v3();
 }
 
-module front_plate_gopro_mount_v1(hole_mode = plate_hole_mode, thickness = base_plate_thickness, rotation = mount_rotation_degrees) {
+module front_plate_gopro_low_profile_mount_v1(hole_mode = plate_hole_mode, thickness = base_plate_thickness, rotation = mount_rotation_degrees) {
     front_plate_base_v1(hole_mode, thickness);
     centered_gopro_mount_2blade_v3(thickness, rotation);
 }
 
-front_plate_gopro_mount_v1();
+front_plate_gopro_low_profile_mount_v1();
